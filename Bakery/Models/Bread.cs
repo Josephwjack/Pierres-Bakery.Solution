@@ -18,7 +18,7 @@ namespace Bakery.Models
     public Bread(int quantity)
     {
       _Price = Price;
-      // _Discount = 0;
+      _Discount = 0;
       Quantity = quantity;
     }
 
@@ -31,6 +31,11 @@ namespace Bakery.Models
         {
           breadTotal += 0;
         }
+        else if (index % 3 == 0)
+        {
+          breadTotal += _Price * _Discount;
+        }
+
         else
         {
           breadTotal += _Price;
@@ -38,7 +43,5 @@ namespace Bakery.Models
       }
       return breadTotal;
     }
-    
-  
   }
 }

@@ -6,10 +6,60 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    // properties, constructors, methods, etc. go here
+    private static double _Price = 0;
+    private double _Discount;
+    public int Quantity { get; set; }
+
+    public static double Price
+    {
+      get { return _Price; }
+      set { _Price = value; }
+    }
+    public Pastry(int quantity)
+    {
+      _Price = Price;
+      _Discount = 1;
+      Quantity = quantity;
+    } 
+
+    public double PastryCost()
+    {
+      double pastryTotal = Quantity*2;
+      for (int index = 1; index <= Quantity; index++)
+      {
+        if (index % 3 == 0)
+        {
+          pastryTotal -= _Discount;
+        }
+        // else{
+        //   pastryTotal += _Price;
+        // }
+      }
+      return pastryTotal;
+    }
   }
 }
-
+// public double PastryCost()
+//     {
+//       double pastryTotal = 0;
+//       for (int index = 0; index <= Quantity; index++)
+//       {
+//         if (index == 0)
+//         {
+//           pastryTotal += 0;
+//         }
+//         else if (index % 2 == 0)
+//         {
+//           pastryTotal += _Price * _Discount;
+//         }
+//         else{
+//           pastryTotal += _Price;
+//         }
+//       }
+//       return pastryTotal;
+//     }
+//   }
+// }
 
 
 
