@@ -54,7 +54,7 @@ namespace Bakery.Tests
     {
       // arrange
       int breadQuantity = 12;
-      double breadCost = 48;
+      double breadCost = 40;
       // act //
       Bread breadOrder = new Bread(breadQuantity);
       // assert
