@@ -16,9 +16,10 @@ Week 1 project for C# and the .NET Core framework.
 | :heavy_check_mark: | User can select order type                                              |
 | :heavy_check_mark: | User enters how many loafs or pastries from corresponding selection menu|
 | :heavy_check_mark: | Console returns appropriate price for selection including discounts     |
-|--------------------| ------------------------------------------------------------------------|
-| Incomplete         |  Future Goals                                                           |
-| ------------------ | ------------------------------------------------------------------------|
+
+
+| Incomplete         |  Future Goals                                                           |                    
+| -------------------| ----------------------------------------------------------------------- |
 |                    | Add all items to "shopping cart" , give option to keep shopping         |
 |                    | After choosing to checkout total sum of all items will be added         |               
 
