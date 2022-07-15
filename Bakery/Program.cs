@@ -7,11 +7,14 @@ namespace Bakery
 {
   public class Program
   {
+
     public static void Main() 
     {
+
       Console.WriteLine("Bienvenue à Pierre's Boulangerie");
       
       StartBakeryMenu();
+
     }
     public static void StartBakeryMenu()
     {
@@ -21,49 +24,63 @@ namespace Bakery
       Console.WriteLine("Please select category:");
       Console.WriteLine(" '1' for Bread |  '2' for Pastries");
       string menuType = Console.ReadLine();
+
       if ( menuType == "1")
       {
         Console.WriteLine("Perfect, how many loaves would you like today?");
         int breadAmount = int.Parse(Console.ReadLine());
         Bread breadOrder = new Bread(breadAmount);
         Console.WriteLine("For " + breadOrder.Quantity + " loaves of bread your total is $" + breadOrder.BreadCost());
+        Console.WriteLine("Would you like to keep shopping? Y/N");
+        string answer = (Console.ReadLine().ToUpper());
 
+        if (answer == "Y")
+        {
+          StartBakeryMenu();
+        }
 
       }
       else if( menuType == "2")
       {
+
         Console.WriteLine("Great choice! How many pastries would you like?");
         int pastryAmount = int.Parse(Console.ReadLine());
         Pastry pastryOrder = new Pastry(pastryAmount);
         Console.WriteLine("For " + pastryOrder.Quantity + " pastries your total will be $" + pastryOrder.PastryCost());
-        Program.totalList.Add(pastryOrder.PastryCost());
-        
+        Console.WriteLine("Would you like to keep shopping? Y/N");
+        string answer = (Console.ReadLine().ToUpper());
+
+        if (answer == "Y")
+        {
+          StartBakeryMenu();
+        }
       }
       else
       {
         Main();
       }
     }
-    public static List<int> totalList = new List<int> {};
-    public void FinishShopping()
-    {
-      Console.WriteLine("All set? Y/N");
-      string checkout = (Console.ReadLine().ToUpper());
-
-      if (checkout == "Y")
-      {
-        int total = 0;
-        for(int i = 0; i < totalList.Count; i ++)
-        {
-          total += totalList[i];
-        }
-        Console.WriteLine(" Here is your full order: ");
-        Environment.Exit(0);
-      }
-      else
-      {
-        StartBakeryMenu();
-      }
-    }
   }
 }
+    // WIP --- WILL TRY TO IMPLEMENT ----
+    // public static List<int> totalList = new List<int> {};
+    // public static void FinishShopping()
+    // {
+    //   Console.WriteLine("All set? Y/N");
+    //   string checkOut = (Console.ReadLine().ToUpper());
+
+    //   if (checkOut == "Y")
+    //   {
+    //     int total = 0;
+    //     for(int i = 0; i < totalList.Count; i ++)
+    //     {
+    //       total += totalList[i];
+    //     }
+    //     Console.WriteLine(" Here is your full order: " + );
+    //     Environment.Exit(0);
+    //   }
+    //   else
+    //   {
+    //     StartBakeryMenu();
+    //   }
+    // }

@@ -5,16 +5,22 @@
 ## Description
 
 Week 1 project for C# and the .NET Core framework.
- A console-based bakery project with two custom classes, varying prices and thorough testing.
+ A console-based bakery project with two custom classes, varying prices based on discounts and thorough testing.
 
 
 ## Logic/Specs
 
-|                    | Minimum Product Features |
-| ------------------ | ------------------------ |
-| :heavy_check_mark: |                          |
-| :heavy_check_mark: |                          |
-| :heavy_check_mark: |                          |
+|                    | Minimum Product Features                                                |
+| ------------------ | ----------------------------------------------------------------------- |
+| :heavy_check_mark: | User is greeted by console and provided prices for bakery options       |
+| :heavy_check_mark: | User can select order type                                              |
+| :heavy_check_mark: | User enters how many loafs or pastries from corresponding selection menu|
+| :heavy_check_mark: | Console returns appropriate price for selection including discounts     |
+|--------------------| ------------------------------------------------------------------------|
+| Incomplete         |  Future Goals                                                           |
+| ------------------ | ------------------------------------------------------------------------|
+|                    | Add all items to "shopping cart" , give option to keep shopping         |
+|                    | After choosing to checkout total sum of all items will be added         |               
 
 ## Setup/Installation Requirements
 
@@ -32,9 +38,18 @@ cd Pierres-Bakery.Solution
 
 * For testing navigate to Bakery.Tests and run `$ dotnet test` in your terminal.
 
+
+## Technologies used
+
+* Git & GitHub
+* C#
+* .Net 5 Framework
+* MSTest
+* VSCode
+
 ## Known Bugs
 
-* Any known issues
+* After user enters amount of pastries or bread application returns to start.
 
 ## Legal
 
