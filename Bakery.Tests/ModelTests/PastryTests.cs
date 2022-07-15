@@ -1,23 +1,24 @@
-// using System;
-// using System.Collections.Generic;
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using Bakery.Models;
+using System;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Bakery.Models;
 
-// namespace Bakery.Tests
-// {
-//   [TestClass]
-//   public class PastryTests // : IDisposable
-//   {
-//     // public void Dispose()
-//     // {
-//     //   ClassName.ClearAll();
-//     // }
+namespace Bakery.Tests
+{
+  [TestClass]
+  public class PastryTests 
+  {
 
-//     [TestMethod]
-//     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-//     {
-//       // any necessary logic to prep for test; instantiating new classes, etc.
-//       Assert.AreEqual();
-//     }
-//   }
-// }
+    [TestMethod]
+    public void PastryCost_CostOnePastryNoDiscount_Int()
+    {
+      // arrange
+      int pastryQuantity = 1;
+      double pastryCost = 2;
+      // act //
+      Pastry pastryOrder = new Pastry(pastryQuantity);
+      // assert
+      Assert.AreEqual(pastryCost, pastryOrder.PastryCost());
+    }
+  }
+}

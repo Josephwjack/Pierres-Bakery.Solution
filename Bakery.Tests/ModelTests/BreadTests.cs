@@ -6,12 +6,10 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BreadTests // : IDisposable
+  public class BreadTests
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
+    
+    
 
     [TestMethod]
     public void BreadCost_CostOneLoafNoDiscount_Int()
